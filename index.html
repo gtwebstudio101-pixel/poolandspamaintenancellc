@@ -51,9 +51,9 @@
         html { scroll-behavior: smooth; }
         body { overflow-x: hidden; }
         
-        /* Hero background for tablet and desktop (PC) */
+        /* Hero background for tablet and desktop (PC) - WITH subtle dark filter */
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://github.com/gtwebstudio101-pixel/poolandspamaintenancellc/blob/4ffb505b3aadc2e53fe81f6aa191de8f8fc675d0/img/no%20co%20crop%20main%20hero%20img.png?raw=true');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('https://github.com/gtwebstudio101-pixel/poolandspamaintenancellc/blob/4ffb505b3aadc2e53fe81f6aa191de8f8fc675d0/img/no%20co%20crop%20main%20hero%20img.png?raw=true');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -62,7 +62,7 @@
         
         @media (max-width: 640px) {
             .hero-bg {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://github.com/gtwebstudio101-pixel/poolandspamaintenancellc/blob/941b8ac623cd155d40398a8936f6de993427ca12/img/no%20co%20crop%20main%20hero%20img%20for%20mobile.png?raw=true');
+                background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('https://github.com/gtwebstudio101-pixel/poolandspamaintenancellc/blob/941b8ac623cd155d40398a8936f6de993427ca12/img/no%20co%20crop%20main%20hero%20img%20for%20mobile.png?raw=true');
                 background-attachment: scroll;
                 background-position: center top;
             }
@@ -74,7 +74,7 @@
             .hero-subtitle-mobile {
                 font-size: 0.875rem !important;
                 line-height: 1.5 !important;
-                opacity: 0.85;
+                opacity: 0.90;
                 max-width: 90% !important;
             }
             .hero-btn-mobile {
@@ -82,6 +82,9 @@
                 padding-left: 2rem !important;
                 padding-right: 2rem !important;
                 font-size: 0.95rem !important;
+            }
+            .hero-content-mobile {
+                padding-top: 5rem !important;
             }
             section {
                 overflow-x: hidden;
@@ -177,17 +180,16 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-bg min-h-screen flex items-center justify-start relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
-        <div class="relative z-10 text-left px-4 sm:px-6 md:px-16 max-w-3xl w-full pt-24 sm:pt-0" data-aos="fade-up" data-aos-duration="1000">
+    <!-- Hero Section - With subtle dark filter -->
+    <section id="home" class="hero-bg min-h-screen flex items-start sm:items-center justify-start relative overflow-hidden">
+        <div class="relative z-10 text-left px-4 sm:px-6 md:px-16 max-w-3xl w-full pt-20 sm:pt-0 hero-content-mobile" data-aos="fade-up" data-aos-duration="1000">
             
-            <h1 class="font-serif text-[3.75rem] sm:text-6xl md:text-7xl lg:text-8xl text-white font-bold mb-3 sm:mb-6 leading-[1.05] hero-title-mobile tracking-tight">
+            <h1 class="font-serif text-[3.75rem] sm:text-6xl md:text-7xl lg:text-8xl text-white font-bold mb-3 sm:mb-6 leading-[1.05] hero-title-mobile tracking-tight drop-shadow-lg">
                 Crystal Clear<br>
                 <span class="text-pool-300 italic">Waters Await</span>
             </h1>
             
-            <p class="text-sm sm:text-lg md:text-xl text-slate-200/90 mb-6 sm:mb-10 max-w-md sm:max-w-xl leading-relaxed font-light hero-subtitle-mobile">
+            <p class="text-sm sm:text-lg md:text-xl text-white/95 mb-6 sm:mb-10 max-w-md sm:max-w-xl leading-relaxed font-medium hero-subtitle-mobile drop-shadow-md">
                 Professional pool and spa maintenance for residential and commercial properties. We treat every pool as if it were our own.
             </p>
             
@@ -200,18 +202,18 @@
                 </a>
             </div>
             
-            <div class="mt-12 sm:mt-16 flex flex-wrap gap-6 sm:gap-10 md:gap-14" data-aos="fade-up" data-aos-delay="400">
+            <div class="mt-10 sm:mt-16 flex flex-wrap gap-6 sm:gap-10 md:gap-14" data-aos="fade-up" data-aos-delay="400">
                 <div class="text-left">
-                    <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1">15+</div>
-                    <div class="text-slate-300 text-[10px] sm:text-xs uppercase tracking-[0.15em] font-medium">YEARS EXPERIENCE</div>
+                    <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 drop-shadow-md">15+</div>
+                    <div class="text-white/85 text-[10px] sm:text-xs uppercase tracking-[0.15em] font-semibold drop-shadow-sm">YEARS EXPERIENCE</div>
                 </div>
                 <div class="text-left">
-                    <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1">500+</div>
-                    <div class="text-slate-300 text-[10px] sm:text-xs uppercase tracking-[0.15em] font-medium">HAPPY CLIENTS</div>
+                    <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 drop-shadow-md">500+</div>
+                    <div class="text-white/85 text-[10px] sm:text-xs uppercase tracking-[0.15em] font-semibold drop-shadow-sm">HAPPY CLIENTS</div>
                 </div>
                 <div class="text-left">
-                    <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1">24/7</div>
-                    <div class="text-slate-300 text-[10px] sm:text-xs uppercase tracking-[0.15em] font-medium">SUPPORT</div>
+                    <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 drop-shadow-md">24/7</div>
+                    <div class="text-white/85 text-[10px] sm:text-xs uppercase tracking-[0.15em] font-semibold drop-shadow-sm">SUPPORT</div>
                 </div>
             </div>
         </div>
@@ -349,45 +351,17 @@
                     </div>
                 </div>
                 
-                <!-- Contact Form with Mailto -->
                 <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl shadow-lg" data-aos="fade-left">
                     <form id="contactForm" class="space-y-4 sm:space-y-6">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                            <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">First Name *</label>
-                                <input type="text" id="firstName" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="John" required>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Last Name</label>
-                                <input type="text" id="lastName" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="Doe">
-                            </div>
+                            <div><label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">First Name *</label><input type="text" id="firstName" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="John" required></div>
+                            <div><label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Last Name</label><input type="text" id="lastName" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="Doe"></div>
                         </div>
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Email *</label>
-                            <input type="email" id="email" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="john@example.com" required>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Phone *</label>
-                            <input type="tel" id="phone" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="(555) 123-4567" required>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Service Needed</label>
-                            <select id="service" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all bg-white text-sm sm:text-base">
-                                <option>Weekly Maintenance</option>
-                                <option>One-Time Cleaning</option>
-                                <option>Equipment Repair</option>
-                                <option>Water Chemistry</option>
-                                <option>Opening/Closing</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Message *</label>
-                            <textarea id="message" rows="4" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="Tell us about your pool and what services you need..." required></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-pool-600 hover:bg-pool-700 text-white font-bold py-3 sm:py-4 rounded-lg transition-all hover:shadow-lg hover:-translate-y-0.5 text-sm sm:text-base">
-                            Send Message via Email
-                        </button>
+                        <div><label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Email *</label><input type="email" id="email" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="john@example.com" required></div>
+                        <div><label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Phone *</label><input type="tel" id="phone" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="(555) 123-4567" required></div>
+                        <div><label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Service Needed</label><select id="service" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all bg-white text-sm sm:text-base"><option>Weekly Maintenance</option><option>One-Time Cleaning</option><option>Equipment Repair</option><option>Water Chemistry</option><option>Opening/Closing</option><option>Other</option></select></div>
+                        <div><label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Message *</label><textarea id="message" rows="4" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="Tell us about your pool and what services you need..." required></textarea></div>
+                        <button type="submit" class="w-full bg-pool-600 hover:bg-pool-700 text-white font-bold py-3 sm:py-4 rounded-lg transition-all hover:shadow-lg hover:-translate-y-0.5 text-sm sm:text-base">Send Message via Email</button>
                         <p class="text-xs text-slate-500 text-center">Clicking send will open your email app</p>
                     </form>
                 </div>
