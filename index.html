@@ -6,20 +6,16 @@
     <title>Pool & Spa Maintenance LLC | Professional Pool Services in New York</title>
     <meta name="description" content="Professional pool and spa maintenance services in New York. Weekly cleaning, repairs, water chemistry, and filtration services for residential and commercial pools.">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com">
     </script>
     
-    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
     </script>
     
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest">
     </script>
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -55,20 +51,42 @@
         html { scroll-behavior: smooth; }
         body { overflow-x: hidden; }
         
-        /* Default hero background for tablet and desktop */
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://github.com/gtwebstudio101-pixel/poolandspamaintenancellc/blob/aa70270a2a38173329158d56f626f207488df8fd/img/pool%20hero%20img.png?raw=true');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://github.com/gtwebstudio101-pixel/poolandspamaintenancellc/blob/5da7574d555e87b67b12e416cbcc9bfc7c9a5841/img/pool%20hero%20img%20edit%202.png?raw=true');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
         
-        /* Mobile hero background */
         @media (max-width: 640px) {
             .hero-bg {
                 background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://github.com/gtwebstudio101-pixel/poolandspamaintenancellc/blob/87fc9ec162bae3155f4a7a4ff0c50ddc83983a64/img/pool%20hero%20img%20for%20mobile.png?raw=true');
                 background-attachment: scroll;
+                background-position: center top;
+            }
+            /* BIGGER hero title on mobile */
+            .hero-title-mobile {
+                font-size: 3.5rem !important;
+                line-height: 1.05 !important;
+                letter-spacing: -0.02em;
+            }
+            /* SMALLER subtitle on mobile */
+            .hero-subtitle-mobile {
+                font-size: 0.875rem !important;
+                line-height: 1.5 !important;
+                opacity: 0.85;
+                max-width: 90% !important;
+            }
+            /* WIDER buttons on mobile */
+            .hero-btn-mobile {
+                width: 100% !important;
+                padding-left: 2rem !important;
+                padding-right: 2rem !important;
+                font-size: 0.95rem !important;
+            }
+            section {
+                overflow-x: hidden;
             }
         }
         
@@ -80,31 +98,17 @@
         .nav-scrolled .phone-text { color: #1e293b !important; }
         .nav-scrolled .logo-subtext { color: #0369a1 !important; }
         
-        /* Horizontal scroll for reviews */
         .reviews-scroll-container {
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
             -ms-overflow-style: none;
         }
-        .reviews-scroll-container::-webkit-scrollbar {
-            display: none;
-        }
-        .review-card {
-            scroll-snap-align: start;
-            flex-shrink: 0;
-        }
-        .dot-indicator {
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        .dot-indicator.active {
-            background-color: #0284c7;
-            width: 24px;
-            border-radius: 12px;
-        }
+        .reviews-scroll-container::-webkit-scrollbar { display: none; }
+        .review-card { scroll-snap-align: start; flex-shrink: 0; }
+        .dot-indicator { transition: all 0.3s ease; cursor: pointer; }
+        .dot-indicator.active { background-color: #0284c7; width: 24px; border-radius: 12px; }
         
-        /* Modern mobile menu - black with white text */
         .mobile-menu-dropdown {
             background: rgba(15, 23, 42, 0.98);
             backdrop-filter: blur(20px);
@@ -114,29 +118,18 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
         }
-
-        /* Prevent overflow on mobile */
-        @media (max-width: 640px) {
-            .hero-bg {
-                background-position: center top;
-            }
-            section {
-                overflow-x: hidden;
-            }
-        }
     </style>
 </head>
 <body class="font-sans text-slate-700 antialiased overflow-x-hidden">
 
-    <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-3 sm:py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <a href="#" class="flex items-center gap-2 group shrink-0">
                     <i data-lucide="waves" class="w-6 h-6 sm:w-8 sm:h-8 text-pool-400 group-hover:text-pool-300 transition-colors"></i>
                     <div class="flex flex-col">
-                        <span class="logo-text text-lg sm:text-xl font-bold text-white tracking-tight leading-tight">Pool & Spa</span>
-                        <span class="logo-subtext text-[10px] sm:text-xs text-pool-200 uppercase tracking-widest leading-tight">Maintenance LLC</span>
+                        <span class="logo-text text-lg sm:text-xl font-bold text-white tracking-tight leading-tight">Pool&Spa</span>
+                        <span class="logo-subtext text-[10px] sm:text-xs text-pool-200 uppercase tracking-[0.2em] leading-tight font-semibold">MAINTENANCE LLC</span>
                     </div>
                 </a>
                 
@@ -149,12 +142,12 @@
                     <a href="tel:+13473930721" class="phone-text text-white hover:text-pool-300 transition-colors font-semibold text-sm lg:text-base flex items-center gap-1.5 whitespace-nowrap">
                         <i data-lucide="phone" class="w-4 h-4"></i> (347) 393-0721
                     </a>
-                    <a href="#contact" class="bg-pool-500 hover:bg-pool-600 text-white px-4 lg:px-6 py-2 lg:py-2.5 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-pool-500/30 text-sm lg:text-base whitespace-nowrap">Get a Quote</a>
+                    <a href="#contact" class="bg-pool-500 hover:bg-pool-600 text-white px-6 py-2.5 rounded-full font-semibold transition-all hover:shadow-lg hover:shadow-pool-500/30 text-sm lg:text-base whitespace-nowrap">Get a Quote</a>
                 </div>
                 
                 <div class="flex items-center gap-3 md:hidden">
-                    <a href="tel:+13473930721" class="phone-text text-white hover:text-pool-300 transition-colors font-semibold text-sm flex items-center gap-1">
-                        <i data-lucide="phone" class="w-4 h-4"></i> (347) 393-0721
+                    <a href="tel:+13473930721" class="phone-text text-white hover:text-pool-300 transition-colors font-semibold text-xs flex items-center gap-1">
+                        <i data-lucide="phone" class="w-3.5 h-3.5"></i> (347) 393-0721
                     </a>
                     <button id="mobile-menu-btn" class="menu-icon text-white relative z-50 transition-colors duration-300 p-1">
                         <i data-lucide="menu" class="w-6 h-6"></i>
@@ -163,7 +156,6 @@
             </div>
         </div>
         
-        <!-- Modern Mobile Menu - Black background white text, no icons -->
         <div id="mobile-menu" class="mobile-menu-dropdown absolute top-full right-4 mt-2 w-56 rounded-2xl py-4 px-1 hidden transition-all duration-300">
             <div class="space-y-0.5">
                 <a href="#home" class="block px-5 py-3 text-white hover:bg-white/10 rounded-xl text-base font-medium transition-all">Home</a>
@@ -178,41 +170,45 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - UPDATED with bigger title, smaller subtitle, wider buttons -->
     <section id="home" class="hero-bg min-h-screen flex items-center justify-start relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
-        <div class="relative z-10 text-left px-4 sm:px-6 md:px-16 max-w-3xl w-full pt-20 sm:pt-0" data-aos="fade-up" data-aos-duration="1000">
+        <div class="relative z-10 text-left px-4 sm:px-6 md:px-16 max-w-3xl w-full pt-24 sm:pt-0" data-aos="fade-up" data-aos-duration="1000">
             
-            <h1 class="font-serif text-5xl sm:text-5xl md:text-7xl lg:text-8xl text-white font-bold mb-3 sm:mb-6 leading-[1.1]">
+            <!-- BIGGER title -->
+            <h1 class="font-serif text-[3.5rem] sm:text-6xl md:text-7xl lg:text-8xl text-white font-bold mb-3 sm:mb-6 leading-[1.05] hero-title-mobile tracking-tight">
                 Crystal Clear<br>
                 <span class="text-pool-300 italic">Waters Await</span>
             </h1>
             
-            <p class="text-base sm:text-xl md:text-2xl text-slate-200 mb-6 sm:mb-10 max-w-xl leading-relaxed font-light opacity-90">
+            <!-- SMALLER subtitle -->
+            <p class="text-sm sm:text-lg md:text-xl text-slate-200/90 mb-6 sm:mb-10 max-w-md sm:max-w-xl leading-relaxed font-light hero-subtitle-mobile">
                 Professional pool and spa maintenance for residential and commercial properties. We treat every pool as if it were our own.
             </p>
             
+            <!-- WIDER buttons -->
             <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
-                <a href="#contact" class="bg-pool-500 hover:bg-pool-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all hover:shadow-xl hover:shadow-pool-500/30 hover:-translate-y-1 w-full sm:w-auto text-center">
+                <a href="#contact" class="bg-pool-500 hover:bg-pool-600 text-white px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all hover:shadow-xl hover:shadow-pool-500/30 hover:-translate-y-1 w-full sm:w-auto text-center hero-btn-mobile min-w-[200px]">
                     Schedule Service
                 </a>
-                <a href="#services" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all hover:-translate-y-1 w-full sm:w-auto text-center mt-2 sm:mt-0">
+                <a href="#services" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all hover:-translate-y-1 w-full sm:w-auto text-center mt-2 sm:mt-0 hero-btn-mobile min-w-[200px]">
                     Our Services
                 </a>
             </div>
             
-            <div class="mt-10 sm:mt-16 flex flex-wrap gap-6 sm:gap-8 md:gap-12" data-aos="fade-up" data-aos-delay="400">
+            <!-- Stats -->
+            <div class="mt-12 sm:mt-16 flex flex-wrap gap-6 sm:gap-10 md:gap-14" data-aos="fade-up" data-aos-delay="400">
                 <div class="text-left">
                     <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1">15+</div>
-                    <div class="text-slate-300 text-xs sm:text-sm uppercase tracking-wider">Years Experience</div>
+                    <div class="text-slate-300 text-[10px] sm:text-xs uppercase tracking-[0.15em] font-medium">YEARS EXPERIENCE</div>
                 </div>
                 <div class="text-left">
                     <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1">500+</div>
-                    <div class="text-slate-300 text-xs sm:text-sm uppercase tracking-wider">Happy Clients</div>
+                    <div class="text-slate-300 text-[10px] sm:text-xs uppercase tracking-[0.15em] font-medium">HAPPY CLIENTS</div>
                 </div>
                 <div class="text-left">
                     <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1">24/7</div>
-                    <div class="text-slate-300 text-xs sm:text-sm uppercase tracking-wider">Support</div>
+                    <div class="text-slate-300 text-[10px] sm:text-xs uppercase tracking-[0.15em] font-medium">SUPPORT</div>
                 </div>
             </div>
         </div>
@@ -241,50 +237,13 @@
                 <div data-aos="fade-left" data-aos-duration="1000">
                     <span class="text-pool-600 font-semibold tracking-wider uppercase text-xs sm:text-sm">About Our Company</span>
                     <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mt-2 sm:mt-3 mb-4 sm:mb-6">Pride in Every Pool We Service</h2>
-                    <p class="text-base sm:text-lg text-slate-600 mb-4 sm:mb-6 leading-relaxed">
-                        Pool & Spa Maintenance LLC was created to serve New York with detailed and professional services in the pool and spa industry. We handle both residential and commercial establishments with the same level of dedication.
-                    </p>
-                    <p class="text-base sm:text-lg text-slate-600 mb-6 sm:mb-8 leading-relaxed">
-                        We treat every customer with respect and handle every job as if it was our own. We take pride in taking ownership in the work we do, ranging from simple cleaning to major repairs and anything in between.
-                    </p>
-                    
+                    <p class="text-base sm:text-lg text-slate-600 mb-4 sm:mb-6 leading-relaxed">Pool & Spa Maintenance LLC was created to serve New York with detailed and professional services in the pool and spa industry. We handle both residential and commercial establishments with the same level of dedication.</p>
+                    <p class="text-base sm:text-lg text-slate-600 mb-6 sm:mb-8 leading-relaxed">We treat every customer with respect and handle every job as if it was our own. We take pride in taking ownership in the work we do, ranging from simple cleaning to major repairs and anything in between.</p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                        <div class="flex items-start gap-3">
-                            <div class="bg-pool-100 p-2 rounded-lg mt-1 shrink-0">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-pool-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-slate-900 text-sm sm:text-base">Expert Technicians</h4>
-                                <p class="text-xs sm:text-sm text-slate-600">Certified and trained professionals</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="bg-pool-100 p-2 rounded-lg mt-1 shrink-0">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-pool-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-slate-900 text-sm sm:text-base">Quality Guaranteed</h4>
-                                <p class="text-xs sm:text-sm text-slate-600">100% satisfaction on every visit</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="bg-pool-100 p-2 rounded-lg mt-1 shrink-0">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-pool-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-slate-900 text-sm sm:text-base">Eco-Friendly</h4>
-                                <p class="text-xs sm:text-sm text-slate-600">Safe chemical balancing</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="bg-pool-100 p-2 rounded-lg mt-1 shrink-0">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-pool-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-slate-900 text-sm sm:text-base">Flexible Scheduling</h4>
-                                <p class="text-xs sm:text-sm text-slate-600">Weekly or on-demand service</p>
-                            </div>
-                        </div>
+                        <div class="flex items-start gap-3"><div class="bg-pool-100 p-2 rounded-lg mt-1 shrink-0"><i data-lucide="check-circle" class="w-5 h-5 text-pool-600"></i></div><div><h4 class="font-semibold text-slate-900 text-sm sm:text-base">Expert Technicians</h4><p class="text-xs sm:text-sm text-slate-600">Certified and trained professionals</p></div></div>
+                        <div class="flex items-start gap-3"><div class="bg-pool-100 p-2 rounded-lg mt-1 shrink-0"><i data-lucide="check-circle" class="w-5 h-5 text-pool-600"></i></div><div><h4 class="font-semibold text-slate-900 text-sm sm:text-base">Quality Guaranteed</h4><p class="text-xs sm:text-sm text-slate-600">100% satisfaction on every visit</p></div></div>
+                        <div class="flex items-start gap-3"><div class="bg-pool-100 p-2 rounded-lg mt-1 shrink-0"><i data-lucide="check-circle" class="w-5 h-5 text-pool-600"></i></div><div><h4 class="font-semibold text-slate-900 text-sm sm:text-base">Eco-Friendly</h4><p class="text-xs sm:text-sm text-slate-600">Safe chemical balancing</p></div></div>
+                        <div class="flex items-start gap-3"><div class="bg-pool-100 p-2 rounded-lg mt-1 shrink-0"><i data-lucide="check-circle" class="w-5 h-5 text-pool-600"></i></div><div><h4 class="font-semibold text-slate-900 text-sm sm:text-base">Flexible Scheduling</h4><p class="text-xs sm:text-sm text-slate-600">Weekly or on-demand service</p></div></div>
                     </div>
                 </div>
             </div>
@@ -294,564 +253,119 @@
     <!-- Services Section -->
     <section id="services" class="py-16 sm:py-24 bg-slate-50 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
-                <span class="text-pool-600 font-semibold tracking-wider uppercase text-xs sm:text-sm">What We Offer</span>
-                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mt-2 sm:mt-3 mb-3 sm:mb-4">Comprehensive Pool Services</h2>
-                <p class="text-base sm:text-lg text-slate-600">From routine maintenance to complex repairs, we keep your pool pristine all season long.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                <div class="service-card bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="0">
-                    <div class="bg-pool-100 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
-                        <i data-lucide="droplets" class="w-6 h-6 sm:w-7 sm:h-7 text-pool-600"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">Weekly Maintenance</h3>
-                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed mb-3 sm:mb-4">Regular cleaning, skimming, vacuuming, and equipment checks to keep your pool in pristine condition at all times.</p>
-                    <ul class="space-y-1 sm:space-y-2 text-xs sm:text-sm text-slate-600">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> Debris removal</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> Wall and floor brushing</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> Equipment inspection</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-pool-100 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
-                        <i data-lucide="flask-conical" class="w-6 h-6 sm:w-7 sm:h-7 text-pool-600"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">Water Chemistry</h3>
-                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed mb-3 sm:mb-4">Precise testing and balancing of pH, chlorine, alkalinity, and other chemical levels to ensure safe, healthy water.</p>
-                    <ul class="space-y-1 sm:space-y-2 text-xs sm:text-sm text-slate-600">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> pH balancing</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> Sanitizer levels</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> Algae prevention</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-pool-100 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
-                        <i data-lucide="filter" class="w-6 h-6 sm:w-7 sm:h-7 text-pool-600"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">Filtration Systems</h3>
-                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed mb-3 sm:mb-4">Expert service for Sand, D.E., and Cartridge filters to optimize water clarity and system efficiency.</p>
-                    <ul class="space-y-1 sm:space-y-2 text-xs sm:text-sm text-slate-600">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> Filter cleaning</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> Backwashing</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> Media replacement</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="0">
-                    <div class="bg-pool-100 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
-                        <i data-lucide="wrench" class="w-6 h-6 sm:w-7 sm:h-7 text-pool-600"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">Equipment Repair</h3>
-                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed mb-3 sm:mb-4">Diagnostics and repair for pumps, heaters, automation systems, and all pool mechanical equipment.</p>
-                    <ul class="space-y-1 sm:space-y-2 text-xs sm:text-sm text-slate-600">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> Pump repair</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> Heater service</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> Leak detection</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-pool-100 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
-                        <i data-lucide="sparkles" class="w-6 h-6 sm:w-7 sm:h-7 text-pool-600"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">Opening & Closing</h3>
-                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed mb-3 sm:mb-4">Seasonal pool opening and winterization services to protect your investment during the off-season.</p>
-                    <ul class="space-y-1 sm:space-y-2 text-xs sm:text-sm text-slate-600">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> Cover installation</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> Winterization</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> Spring startup</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-pool-100 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
-                        <i data-lucide="building-2" class="w-6 h-6 sm:w-7 sm:h-7 text-pool-600"></i>
-                    </div>
-                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">Commercial Service</h3>
-                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed mb-3 sm:mb-4">Specialized maintenance programs for hotels, gyms, apartment complexes, and public facilities.</p>
-                    <ul class="space-y-1 sm:space-y-2 text-xs sm:text-sm text-slate-600">
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> Health code compliance</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> Daily service options</li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> Log keeping</li>
-                    </ul>
-                </div>
-            </div>
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16" data-aos="fade-up"><span class="text-pool-600 font-semibold tracking-wider uppercase text-xs sm:text-sm">What We Offer</span><h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mt-2 sm:mt-3 mb-3 sm:mb-4">Comprehensive Pool Services</h2><p class="text-base sm:text-lg text-slate-600">From routine maintenance to complex repairs, we keep your pool pristine all season long.</p></div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="servicesGrid"></div>
         </div>
     </section>
 
     <!-- Why Choose Us -->
     <section id="why-us" class="py-16 sm:py-24 bg-pool-900 text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path d="M0,50 Q25,30 50,50 T100,50 L100,100 L0,100 Z" fill="currentColor" />
-            </svg>
-        </div>
-        
+        <div class="absolute inset-0 opacity-10"><svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,50 Q25,30 50,50 T100,50 L100,100 L0,100 Z" fill="currentColor"/></svg></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-                <div data-aos="fade-right">
-                    <span class="text-pool-300 font-semibold tracking-wider uppercase text-xs sm:text-sm">Why Choose Us</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mt-2 sm:mt-3 mb-4 sm:mb-6">The Clear Choice for Pool Care</h2>
-                    <p class="text-pool-100 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
-                        We combine technical expertise with genuine customer care. Our team doesn't just clean pools—we protect your investment and ensure your family enjoys safe, crystal-clear water.
-                    </p>
-                    
-                    <div class="space-y-4 sm:space-y-6">
-                        <div class="flex gap-3 sm:gap-4 items-start">
-                            <div class="bg-pool-800 p-2 sm:p-3 rounded-lg shrink-0">
-                                <i data-lucide="award" class="w-5 h-5 sm:w-6 sm:h-6 text-pool-300"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">Certified Professionals</h4>
-                                <p class="text-pool-200 text-sm sm:text-base">Our technicians are fully trained, licensed, and insured for your complete peace of mind.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex gap-3 sm:gap-4 items-start">
-                            <div class="bg-pool-800 p-2 sm:p-3 rounded-lg shrink-0">
-                                <i data-lucide="clock" class="w-5 h-5 sm:w-6 sm:h-6 text-pool-300"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">Reliable Scheduling</h4>
-                                <p class="text-pool-200 text-sm sm:text-base">Consistent weekly service or on-demand calls—we show up when we say we will.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex gap-3 sm:gap-4 items-start">
-                            <div class="bg-pool-800 p-2 sm:p-3 rounded-lg shrink-0">
-                                <i data-lucide="heart-handshake" class="w-5 h-5 sm:w-6 sm:h-6 text-pool-300"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">Ownership Mentality</h4>
-                                <p class="text-pool-200 text-sm sm:text-base">We treat every job as if it were our own pool, ensuring meticulous attention to detail.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-2 gap-4 sm:gap-6" data-aos="fade-left">
-                    <div class="space-y-4 sm:space-y-6 mt-8 sm:mt-12">
-                        <div class="bg-pool-800/50 backdrop-blur-sm p-4 sm:p-6 rounded-2xl border border-pool-700">
-                            <i data-lucide="users" class="w-8 h-8 sm:w-10 sm:h-10 text-pool-300 mb-2 sm:mb-3"></i>
-                            <div class="text-2xl sm:text-3xl font-bold mb-1">500+</div>
-                            <div class="text-pool-200 text-xs sm:text-sm">Happy Clients</div>
-                        </div>
-                        <div class="bg-pool-800/50 backdrop-blur-sm p-4 sm:p-6 rounded-2xl border border-pool-700">
-                            <i data-lucide="calendar-check" class="w-8 h-8 sm:w-10 sm:h-10 text-pool-300 mb-2 sm:mb-3"></i>
-                            <div class="text-2xl sm:text-3xl font-bold mb-1">10k+</div>
-                            <div class="text-pool-200 text-xs sm:text-sm">Services Completed</div>
-                        </div>
-                    </div>
-                    <div class="space-y-4 sm:space-y-6">
-                        <div class="bg-pool-800/50 backdrop-blur-sm p-4 sm:p-6 rounded-2xl border border-pool-700">
-                            <i data-lucide="star" class="w-8 h-8 sm:w-10 sm:h-10 text-pool-300 mb-2 sm:mb-3"></i>
-                            <div class="text-2xl sm:text-3xl font-bold mb-1">4.9</div>
-                            <div class="text-pool-200 text-xs sm:text-sm">Average Rating</div>
-                        </div>
-                        <div class="bg-pool-800/50 backdrop-blur-sm p-4 sm:p-6 rounded-2xl border border-pool-700">
-                            <i data-lucide="map-pin" class="w-8 h-8 sm:w-10 sm:h-10 text-pool-300 mb-2 sm:mb-3"></i>
-                            <div class="text-2xl sm:text-3xl font-bold mb-1">NY</div>
-                            <div class="text-pool-200 text-xs sm:text-sm">Statewide Service</div>
-                        </div>
-                    </div>
-                </div>
+                <div data-aos="fade-right"><span class="text-pool-300 font-semibold tracking-wider uppercase text-xs sm:text-sm">Why Choose Us</span><h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mt-2 sm:mt-3 mb-4 sm:mb-6">The Clear Choice for Pool Care</h2><p class="text-pool-100 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">We combine technical expertise with genuine customer care. Our team doesn't just clean pools—we protect your investment and ensure your family enjoys safe, crystal-clear water.</p><div class="space-y-4 sm:space-y-6"><div class="flex gap-3 sm:gap-4 items-start"><div class="bg-pool-800 p-2 sm:p-3 rounded-lg shrink-0"><i data-lucide="award" class="w-5 h-5 sm:w-6 sm:h-6 text-pool-300"></i></div><div><h4 class="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">Certified Professionals</h4><p class="text-pool-200 text-sm sm:text-base">Our technicians are fully trained, licensed, and insured.</p></div></div><div class="flex gap-3 sm:gap-4 items-start"><div class="bg-pool-800 p-2 sm:p-3 rounded-lg shrink-0"><i data-lucide="clock" class="w-5 h-5 sm:w-6 sm:h-6 text-pool-300"></i></div><div><h4 class="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">Reliable Scheduling</h4><p class="text-pool-200 text-sm sm:text-base">Consistent weekly service or on-demand calls—we show up when we say we will.</p></div></div><div class="flex gap-3 sm:gap-4 items-start"><div class="bg-pool-800 p-2 sm:p-3 rounded-lg shrink-0"><i data-lucide="heart-handshake" class="w-5 h-5 sm:w-6 sm:h-6 text-pool-300"></i></div><div><h4 class="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">Ownership Mentality</h4><p class="text-pool-200 text-sm sm:text-base">We treat every job as if it were our own pool.</p></div></div></div></div>
+                <div class="grid grid-cols-2 gap-4 sm:gap-6" data-aos="fade-left"><div class="space-y-4 sm:space-y-6 mt-8 sm:mt-12"><div class="bg-pool-800/50 backdrop-blur-sm p-4 sm:p-6 rounded-2xl border border-pool-700"><i data-lucide="users" class="w-8 h-8 sm:w-10 sm:h-10 text-pool-300 mb-2 sm:mb-3"></i><div class="text-2xl sm:text-3xl font-bold mb-1">500+</div><div class="text-pool-200 text-xs sm:text-sm">Happy Clients</div></div><div class="bg-pool-800/50 backdrop-blur-sm p-4 sm:p-6 rounded-2xl border border-pool-700"><i data-lucide="calendar-check" class="w-8 h-8 sm:w-10 sm:h-10 text-pool-300 mb-2 sm:mb-3"></i><div class="text-2xl sm:text-3xl font-bold mb-1">10k+</div><div class="text-pool-200 text-xs sm:text-sm">Services Completed</div></div></div><div class="space-y-4 sm:space-y-6"><div class="bg-pool-800/50 backdrop-blur-sm p-4 sm:p-6 rounded-2xl border border-pool-700"><i data-lucide="star" class="w-8 h-8 sm:w-10 sm:h-10 text-pool-300 mb-2 sm:mb-3"></i><div class="text-2xl sm:text-3xl font-bold mb-1">4.9</div><div class="text-pool-200 text-xs sm:text-sm">Average Rating</div></div><div class="bg-pool-800/50 backdrop-blur-sm p-4 sm:p-6 rounded-2xl border border-pool-700"><i data-lucide="map-pin" class="w-8 h-8 sm:w-10 sm:h-10 text-pool-300 mb-2 sm:mb-3"></i><div class="text-2xl sm:text-3xl font-bold mb-1">NY</div><div class="text-pool-200 text-xs sm:text-sm">Statewide Service</div></div></div></div>
             </div>
         </div>
     </section>
 
     <!-- Process Section -->
     <section class="py-16 sm:py-24 bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
-                <span class="text-pool-600 font-semibold tracking-wider uppercase text-xs sm:text-sm">How It Works</span>
-                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mt-2 sm:mt-3 mb-3 sm:mb-4">Simple, Stress-Free Service</h2>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
-                <div class="text-center relative" data-aos="fade-up" data-aos-delay="0">
-                    <div class="w-16 h-16 sm:w-20 sm:h-20 bg-pool-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 relative z-10">
-                        <span class="text-xl sm:text-2xl font-bold text-pool-600">01</span>
-                    </div>
-                    <h3 class="text-base sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">Contact Us</h3>
-                    <p class="text-xs sm:text-sm text-slate-600">Call or fill out our form for a free consultation and quote.</p>
-                </div>
-                
-                <div class="text-center relative" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16 sm:w-20 sm:h-20 bg-pool-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 relative z-10">
-                        <span class="text-xl sm:text-2xl font-bold text-pool-600">02</span>
-                    </div>
-                    <h3 class="text-base sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">Assessment</h3>
-                    <p class="text-xs sm:text-sm text-slate-600">We evaluate your pool's condition and discuss your specific needs.</p>
-                </div>
-                
-                <div class="text-center relative" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 sm:w-20 sm:h-20 bg-pool-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 relative z-10">
-                        <span class="text-xl sm:text-2xl font-bold text-pool-600">03</span>
-                    </div>
-                    <h3 class="text-base sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">Service</h3>
-                    <p class="text-xs sm:text-sm text-slate-600">Our team performs the scheduled maintenance or repairs.</p>
-                </div>
-                
-                <div class="text-center relative" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16 sm:w-20 sm:h-20 bg-pool-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 relative z-10">
-                        <span class="text-xl sm:text-2xl font-bold text-pool-600">04</span>
-                    </div>
-                    <h3 class="text-base sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">Enjoy</h3>
-                    <p class="text-xs sm:text-sm text-slate-600">Dive into crystal clear water and enjoy your perfect pool.</p>
-                </div>
-            </div>
-        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16" data-aos="fade-up"><span class="text-pool-600 font-semibold tracking-wider uppercase text-xs sm:text-sm">How It Works</span><h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mt-2 sm:mt-3 mb-3 sm:mb-4">Simple, Stress-Free Service</h2></div><div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8"><div class="text-center relative" data-aos="fade-up" data-aos-delay="0"><div class="w-16 h-16 sm:w-20 sm:h-20 bg-pool-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 relative z-10"><span class="text-xl sm:text-2xl font-bold text-pool-600">01</span></div><h3 class="text-base sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">Contact Us</h3><p class="text-xs sm:text-sm text-slate-600">Call or fill out our form for a free consultation and quote.</p></div><div class="text-center relative" data-aos="fade-up" data-aos-delay="100"><div class="w-16 h-16 sm:w-20 sm:h-20 bg-pool-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 relative z-10"><span class="text-xl sm:text-2xl font-bold text-pool-600">02</span></div><h3 class="text-base sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">Assessment</h3><p class="text-xs sm:text-sm text-slate-600">We evaluate your pool's condition and discuss your specific needs.</p></div><div class="text-center relative" data-aos="fade-up" data-aos-delay="200"><div class="w-16 h-16 sm:w-20 sm:h-20 bg-pool-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 relative z-10"><span class="text-xl sm:text-2xl font-bold text-pool-600">03</span></div><h3 class="text-base sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">Service</h3><p class="text-xs sm:text-sm text-slate-600">Our team performs the scheduled maintenance or repairs.</p></div><div class="text-center relative" data-aos="fade-up" data-aos-delay="300"><div class="w-16 h-16 sm:w-20 sm:h-20 bg-pool-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 relative z-10"><span class="text-xl sm:text-2xl font-bold text-pool-600">04</span></div><h3 class="text-base sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">Enjoy</h3><p class="text-xs sm:text-sm text-slate-600">Dive into crystal clear water and enjoy your perfect pool.</p></div></div></div>
     </section>
 
-    <!-- Testimonials / Reviews Section with Horizontal Scroll -->
+    <!-- Testimonials Section -->
     <section id="testimonials" class="py-16 sm:py-24 bg-slate-50 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
-                <span class="text-pool-600 font-semibold tracking-wider uppercase text-xs sm:text-sm">Testimonials</span>
-                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mt-2 sm:mt-3 mb-3 sm:mb-4">What Our Clients Say</h2>
-                <div class="flex items-center justify-center gap-2 mt-2">
-                    <span class="text-yellow-500 font-bold text-lg">4.4</span>
-                    <div class="flex text-yellow-400">
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 text-slate-300 fill-current"></i>
-                    </div>
-                    <span class="text-sm text-slate-500">7 reviews</span>
-                </div>
-            </div>
-            
-            <!-- Horizontal Scroll Container -->
-            <div id="reviewsScrollContainer" class="reviews-scroll-container flex gap-4 sm:gap-6 overflow-x-auto pb-6 px-1 sm:px-2 snap-x snap-mandatory">
-                <div class="review-card bg-white p-5 sm:p-6 rounded-2xl shadow-lg w-[85vw] sm:w-[400px] md:w-[450px] flex-shrink-0 snap-start">
-                    <div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 bg-pool-100 rounded-full flex items-center justify-center shrink-0"><span class="text-pool-700 font-bold text-sm">JM</span></div><div><div class="font-semibold text-slate-900 text-sm">Jose Murga</div><div class="text-xs text-slate-500">10 reviews</div></div></div>
-                    <div class="flex text-yellow-400 mb-2 text-sm"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-                    <p class="text-slate-600 text-sm italic leading-relaxed">"Marlon is quite knowledgeable about hot tubs, he knew exactly how to diagnose my Bullfrog issue..."</p>
-                    <span class="text-xs text-slate-400 mt-3 block">8 months ago</span>
-                </div>
-                <div class="review-card bg-white p-5 sm:p-6 rounded-2xl shadow-lg w-[85vw] sm:w-[400px] md:w-[450px] flex-shrink-0 snap-start">
-                    <div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 bg-pool-100 rounded-full flex items-center justify-center shrink-0"><span class="text-pool-700 font-bold text-sm">TC</span></div><div><div class="font-semibold text-slate-900 text-sm">Tim Carlos</div><div class="text-xs text-slate-500">Local Guide · 11 reviews</div></div></div>
-                    <div class="flex text-yellow-400 mb-2 text-sm"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-                    <p class="text-slate-600 text-sm italic leading-relaxed">"I recently had a great experience with Marlon setting up our new hot tub. He was extremely knowledgeable..."</p>
-                    <span class="text-xs text-slate-400 mt-3 block">a year ago</span>
-                </div>
-                <div class="review-card bg-white p-5 sm:p-6 rounded-2xl shadow-lg w-[85vw] sm:w-[400px] md:w-[450px] flex-shrink-0 snap-start">
-                    <div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 bg-pool-100 rounded-full flex items-center justify-center shrink-0"><span class="text-pool-700 font-bold text-sm">JG</span></div><div><div class="font-semibold text-slate-900 text-sm">John Gluszak</div><div class="text-xs text-slate-500">Local Guide · 41 reviews</div></div></div>
-                    <div class="flex text-yellow-400 mb-2 text-sm"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-                    <p class="text-slate-600 text-sm italic leading-relaxed">"Marlon is excellent! He went above and beyond installing my new pool liner on a Sunday..."</p>
-                    <span class="text-xs text-slate-400 mt-3 block">a year ago</span>
-                </div>
-                <div class="review-card bg-white p-5 sm:p-6 rounded-2xl shadow-lg w-[85vw] sm:w-[400px] md:w-[450px] flex-shrink-0 snap-start">
-                    <div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 bg-pool-100 rounded-full flex items-center justify-center shrink-0"><span class="text-pool-700 font-bold text-sm">LK</span></div><div><div class="font-semibold text-slate-900 text-sm">Lina Koffman</div><div class="text-xs text-slate-500">Local Guide · 19 reviews</div></div></div>
-                    <div class="flex text-yellow-400 mb-2 text-sm"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-                    <p class="text-slate-600 text-sm italic leading-relaxed">"Marlon is clearly the best guy you can hire for your pool needs! Highly recommended!"</p>
-                    <span class="text-xs text-slate-400 mt-3 block">2 years ago</span>
-                </div>
-                <div class="review-card bg-white p-5 sm:p-6 rounded-2xl shadow-lg w-[85vw] sm:w-[400px] md:w-[450px] flex-shrink-0 snap-start">
-                    <div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center shrink-0"><span class="text-slate-600 font-bold text-sm">LE</span></div><div><div class="font-semibold text-slate-900 text-sm">luis espinosa</div><div class="text-xs text-slate-500">2 reviews</div></div></div>
-                    <div class="flex text-yellow-400 mb-2 text-sm"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-                    <p class="text-slate-600 text-sm italic leading-relaxed">"Excellent service, very outgoing and responsible, would recommend 100%"</p>
-                    <span class="text-xs text-slate-400 mt-3 block">5 years ago</span>
-                </div>
-                <div class="review-card bg-white p-5 sm:p-6 rounded-2xl shadow-lg w-[85vw] sm:w-[400px] md:w-[450px] flex-shrink-0 snap-start">
-                    <div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 bg-pool-100 rounded-full flex items-center justify-center shrink-0"><span class="text-pool-700 font-bold text-sm">WG</span></div><div><div class="font-semibold text-slate-900 text-sm">William Guerra</div><div class="text-xs text-slate-500">3 reviews</div></div></div>
-                    <div class="flex text-yellow-400 mb-2 text-sm"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
-                    <p class="text-slate-600 text-sm italic leading-relaxed">Positive: Responsiveness, Quality, Professionalism</p>
-                    <span class="text-xs text-slate-400 mt-3 block">5 years ago</span>
-                </div>
-            </div>
-            
-            <!-- Dotted Navigation Indicators -->
-            <div class="flex justify-center items-center gap-2 mt-6 sm:mt-8" id="dotIndicators">
-                <button class="dot-indicator w-3 h-3 bg-slate-300 rounded-full transition-all duration-300 active" data-index="0" aria-label="Review 1"></button>
-                <button class="dot-indicator w-3 h-3 bg-slate-300 rounded-full transition-all duration-300" data-index="1" aria-label="Review 2"></button>
-                <button class="dot-indicator w-3 h-3 bg-slate-300 rounded-full transition-all duration-300" data-index="2" aria-label="Review 3"></button>
-                <button class="dot-indicator w-3 h-3 bg-slate-300 rounded-full transition-all duration-300" data-index="3" aria-label="Review 4"></button>
-                <button class="dot-indicator w-3 h-3 bg-slate-300 rounded-full transition-all duration-300" data-index="4" aria-label="Review 5"></button>
-                <button class="dot-indicator w-3 h-3 bg-slate-300 rounded-full transition-all duration-300" data-index="5" aria-label="Review 6"></button>
-            </div>
-        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up"><span class="text-pool-600 font-semibold tracking-wider uppercase text-xs sm:text-sm">Testimonials</span><h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mt-2 sm:mt-3 mb-3 sm:mb-4">What Our Clients Say</h2><div class="flex items-center justify-center gap-2 mt-2"><span class="text-yellow-500 font-bold text-lg">4.4</span><div class="flex text-yellow-400"><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 text-slate-300 fill-current"></i></div><span class="text-sm text-slate-500">7 reviews</span></div></div><div id="reviewsScrollContainer" class="reviews-scroll-container flex gap-4 sm:gap-6 overflow-x-auto pb-6 px-1 sm:px-2 snap-x snap-mandatory"></div><div class="flex justify-center items-center gap-2 mt-6 sm:mt-8" id="dotIndicators"><button class="dot-indicator w-3 h-3 bg-slate-300 rounded-full transition-all duration-300 active" data-index="0" aria-label="Review 1"></button><button class="dot-indicator w-3 h-3 bg-slate-300 rounded-full transition-all duration-300" data-index="1" aria-label="Review 2"></button><button class="dot-indicator w-3 h-3 bg-slate-300 rounded-full transition-all duration-300" data-index="2" aria-label="Review 3"></button><button class="dot-indicator w-3 h-3 bg-slate-300 rounded-full transition-all duration-300" data-index="3" aria-label="Review 4"></button><button class="dot-indicator w-3 h-3 bg-slate-300 rounded-full transition-all duration-300" data-index="4" aria-label="Review 5"></button><button class="dot-indicator w-3 h-3 bg-slate-300 rounded-full transition-all duration-300" data-index="5" aria-label="Review 6"></button></div></div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 sm:py-24 bg-pool-600 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="url(#grid)" />
-                <defs>
-                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                        <circle cx="1" cy="1" r="1" fill="white" />
-                    </pattern>
-                </defs>
-            </svg>
-        </div>
-        <div class="max-w-4xl mx-auto px-4 text-center relative z-10" data-aos="zoom-in">
-            <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">Ready for Crystal Clear Water?</h2>
-            <p class="text-lg sm:text-xl text-pool-100 mb-8 sm:mb-10">Get your free quote today and experience the difference professional pool care makes.</p>
-            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-                <a href="#contact" class="bg-white text-pool-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-pool-50 transition-all hover:shadow-xl hover:-translate-y-1">
-                    Get Free Quote
-                </a>
-                <a href="tel:+13473930721" class="bg-pool-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-pool-800 transition-all border border-pool-500">
-                    Call (347) 393-0721
-                </a>
-            </div>
-        </div>
-    </section>
+    <section class="py-16 sm:py-24 bg-pool-600 relative overflow-hidden"><div class="absolute inset-0 opacity-20"><svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="white"/></pattern></defs><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="url(#grid)"/></svg></div><div class="max-w-4xl mx-auto px-4 text-center relative z-10" data-aos="zoom-in"><h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">Ready for Crystal Clear Water?</h2><p class="text-lg sm:text-xl text-pool-100 mb-8 sm:mb-10">Get your free quote today and experience the difference professional pool care makes.</p><div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"><a href="#contact" class="bg-white text-pool-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-pool-50 transition-all hover:shadow-xl hover:-translate-y-1">Get Free Quote</a><a href="tel:+13473930721" class="bg-pool-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-pool-800 transition-all border border-pool-500">Call (347) 393-0721</a></div></div></section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 sm:py-24 bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
-                <div data-aos="fade-right">
-                    <span class="text-pool-600 font-semibold tracking-wider uppercase text-xs sm:text-sm">Get In Touch</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mt-2 sm:mt-3 mb-4 sm:mb-6">Let's Discuss Your Pool Needs</h2>
-                    <p class="text-base sm:text-lg text-slate-600 mb-6 sm:mb-8">
-                        Whether you need weekly maintenance, a one-time repair, or a complete system overhaul, we're here to help. Reach out today.
-                    </p>
-                    
-                    <div class="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
-                        <div class="flex items-center gap-3 sm:gap-4">
-                            <div class="bg-pool-100 p-2 sm:p-3 rounded-lg shrink-0">
-                                <i data-lucide="phone" class="w-5 h-5 sm:w-6 sm:h-6 text-pool-600"></i>
-                            </div>
-                            <div>
-                                <div class="text-xs sm:text-sm text-slate-500">Phone</div>
-                                <div class="font-semibold text-slate-900 text-sm sm:text-base">(347) 393-0721</div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center gap-3 sm:gap-4">
-                            <div class="bg-pool-100 p-2 sm:p-3 rounded-lg shrink-0">
-                                <i data-lucide="mail" class="w-5 h-5 sm:w-6 sm:h-6 text-pool-600"></i>
-                            </div>
-                            <div>
-                                <div class="text-xs sm:text-sm text-slate-500">Email</div>
-                                <div class="font-semibold text-slate-900 text-sm sm:text-base">poolandspamaintenancellc@gmail.com</div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center gap-3 sm:gap-4">
-                            <div class="bg-pool-100 p-2 sm:p-3 rounded-lg shrink-0">
-                                <i data-lucide="map-pin" class="w-5 h-5 sm:w-6 sm:h-6 text-pool-600"></i>
-                            </div>
-                            <div>
-                                <div class="text-xs sm:text-sm text-slate-500">Service Area</div>
-                                <div class="font-semibold text-slate-900 text-sm sm:text-base">All of New York State</div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center gap-3 sm:gap-4">
-                            <div class="bg-pool-100 p-2 sm:p-3 rounded-lg shrink-0">
-                                <i data-lucide="clock" class="w-5 h-5 sm:w-6 sm:h-6 text-pool-600"></i>
-                            </div>
-                            <div>
-                                <div class="text-xs sm:text-sm text-slate-500">Hours</div>
-                                <div class="font-semibold text-slate-900 text-sm sm:text-base">Mon - Sat: 8AM - 7PM</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="flex gap-3 sm:gap-4">
-                        <a href="#" class="bg-slate-100 p-2 sm:p-3 rounded-lg hover:bg-pool-100 hover:text-pool-600 transition-colors">
-                            <i data-lucide="facebook" class="w-4 h-4 sm:w-5 sm:h-5"></i>
-                        </a>
-                        <a href="#" class="bg-slate-100 p-2 sm:p-3 rounded-lg hover:bg-pool-100 hover:text-pool-600 transition-colors">
-                            <i data-lucide="instagram" class="w-4 h-4 sm:w-5 sm:h-5"></i>
-                        </a>
-                        <a href="#" class="bg-slate-100 p-2 sm:p-3 rounded-lg hover:bg-pool-100 hover:text-pool-600 transition-colors">
-                            <i data-lucide="linkedin" class="w-4 h-4 sm:w-5 sm:h-5"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl shadow-lg" data-aos="fade-left">
-                    <form class="space-y-4 sm:space-y-6" onsubmit="event.preventDefault(); alert('Thank you! We will contact you shortly.');">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                            <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">First Name</label>
-                                <input type="text" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="John">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Last Name</label>
-                                <input type="text" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="Doe">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Email</label>
-                            <input type="email" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="john@example.com">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Phone</label>
-                            <input type="tel" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="(555) 123-4567">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Service Needed</label>
-                            <select class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all bg-white text-sm sm:text-base">
-                                <option>Weekly Maintenance</option>
-                                <option>One-Time Cleaning</option>
-                                <option>Equipment Repair</option>
-                                <option>Water Chemistry</option>
-                                <option>Opening/Closing</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Message</label>
-                            <textarea rows="3" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="Tell us about your pool..."></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-pool-600 hover:bg-pool-700 text-white font-bold py-3 sm:py-4 rounded-lg transition-all hover:shadow-lg hover:-translate-y-0.5 text-sm sm:text-base">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section id="contact" class="py-16 sm:py-24 bg-white overflow-hidden"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid lg:grid-cols-2 gap-10 lg:gap-16"><div data-aos="fade-right"><span class="text-pool-600 font-semibold tracking-wider uppercase text-xs sm:text-sm">Get In Touch</span><h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mt-2 sm:mt-3 mb-4 sm:mb-6">Let's Discuss Your Pool Needs</h2><p class="text-base sm:text-lg text-slate-600 mb-6 sm:mb-8">Whether you need weekly maintenance, a one-time repair, or a complete system overhaul, we're here to help. Reach out today.</p><div class="space-y-4 sm:space-y-6 mb-6 sm:mb-8"><div class="flex items-center gap-3 sm:gap-4"><div class="bg-pool-100 p-2 sm:p-3 rounded-lg shrink-0"><i data-lucide="phone" class="w-5 h-5 sm:w-6 sm:h-6 text-pool-600"></i></div><div><div class="text-xs sm:text-sm text-slate-500">Phone</div><div class="font-semibold text-slate-900 text-sm sm:text-base">(347) 393-0721</div></div></div><div class="flex items-center gap-3 sm:gap-4"><div class="bg-pool-100 p-2 sm:p-3 rounded-lg shrink-0"><i data-lucide="mail" class="w-5 h-5 sm:w-6 sm:h-6 text-pool-600"></i></div><div><div class="text-xs sm:text-sm text-slate-500">Email</div><div class="font-semibold text-slate-900 text-sm sm:text-base">poolandspamaintenancellc@gmail.com</div></div></div><div class="flex items-center gap-3 sm:gap-4"><div class="bg-pool-100 p-2 sm:p-3 rounded-lg shrink-0"><i data-lucide="map-pin" class="w-5 h-5 sm:w-6 sm:h-6 text-pool-600"></i></div><div><div class="text-xs sm:text-sm text-slate-500">Service Area</div><div class="font-semibold text-slate-900 text-sm sm:text-base">All of New York State</div></div></div><div class="flex items-center gap-3 sm:gap-4"><div class="bg-pool-100 p-2 sm:p-3 rounded-lg shrink-0"><i data-lucide="clock" class="w-5 h-5 sm:w-6 sm:h-6 text-pool-600"></i></div><div><div class="text-xs sm:text-sm text-slate-500">Hours</div><div class="font-semibold text-slate-900 text-sm sm:text-base">Mon - Sat: 8AM - 7PM</div></div></div></div><div class="flex gap-3 sm:gap-4"><a href="#" class="bg-slate-100 p-2 sm:p-3 rounded-lg hover:bg-pool-100 hover:text-pool-600 transition-colors"><i data-lucide="facebook" class="w-4 h-4 sm:w-5 sm:h-5"></i></a><a href="#" class="bg-slate-100 p-2 sm:p-3 rounded-lg hover:bg-pool-100 hover:text-pool-600 transition-colors"><i data-lucide="instagram" class="w-4 h-4 sm:w-5 sm:h-5"></i></a><a href="#" class="bg-slate-100 p-2 sm:p-3 rounded-lg hover:bg-pool-100 hover:text-pool-600 transition-colors"><i data-lucide="linkedin" class="w-4 h-4 sm:w-5 sm:h-5"></i></a></div></div><div class="bg-slate-50 p-6 sm:p-8 rounded-2xl shadow-lg" data-aos="fade-left"><form class="space-y-4 sm:space-y-6" onsubmit="event.preventDefault(); alert('Thank you! We will contact you shortly.');"><div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"><div><label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">First Name</label><input type="text" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="John"></div><div><label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Last Name</label><input type="text" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="Doe"></div></div><div><label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Email</label><input type="email" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="john@example.com"></div><div><label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Phone</label><input type="tel" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="(555) 123-4567"></div><div><label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Service Needed</label><select class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all bg-white text-sm sm:text-base"><option>Weekly Maintenance</option><option>One-Time Cleaning</option><option>Equipment Repair</option><option>Water Chemistry</option><option>Opening/Closing</option><option>Other</option></select></div><div><label class="block text-sm font-medium text-slate-700 mb-1 sm:mb-2">Message</label><textarea rows="3" class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border border-slate-300 focus:border-pool-500 focus:ring-2 focus:ring-pool-200 outline-none transition-all text-sm sm:text-base" placeholder="Tell us about your pool..."></textarea></div><button type="submit" class="w-full bg-pool-600 hover:bg-pool-700 text-white font-bold py-3 sm:py-4 rounded-lg transition-all hover:shadow-lg hover:-translate-y-0.5 text-sm sm:text-base">Send Message</button></form></div></div></div></section>
 
-    <!-- Footer - Mobile Friendly Compact -->
-    <footer class="bg-slate-900 text-slate-300 py-8 sm:py-10 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col items-center text-center gap-6">
-                <div class="flex items-center gap-2">
-                    <i data-lucide="waves" class="w-5 h-5 text-pool-400"></i>
-                    <span class="text-lg font-bold text-white">Pool & Spa Maintenance LLC</span>
-                </div>
-                <p class="text-slate-400 text-xs sm:text-sm max-w-md">
-                    Professional pool and spa services across New York. Licensed, insured, and dedicated to crystal clear results.
-                </p>
-                <a href="tel:+13473930721" class="inline-flex items-center gap-2 text-pool-400 hover:text-pool-300 transition-colors text-sm font-medium">
-                    <i data-lucide="phone" class="w-4 h-4"></i> (347) 393-0721
-                </a>
-                <div class="flex gap-4 text-xs sm:text-sm">
-                    <a href="#home" class="hover:text-white transition-colors">Home</a>
-                    <a href="#services" class="hover:text-white transition-colors">Services</a>
-                    <a href="#contact" class="hover:text-white transition-colors">Contact</a>
-                </div>
-                <div class="flex gap-3 sm:gap-4">
-                    <a href="#" class="bg-slate-800 p-2 rounded-lg hover:bg-pool-700 hover:text-white transition-colors">
-                        <i data-lucide="facebook" class="w-4 h-4"></i>
-                    </a>
-                    <a href="#" class="bg-slate-800 p-2 rounded-lg hover:bg-pool-700 hover:text-white transition-colors">
-                        <i data-lucide="instagram" class="w-4 h-4"></i>
-                    </a>
-                    <a href="#" class="bg-slate-800 p-2 rounded-lg hover:bg-pool-700 hover:text-white transition-colors">
-                        <i data-lucide="linkedin" class="w-4 h-4"></i>
-                    </a>
-                </div>
-                <div class="border-t border-slate-800 pt-5 w-full flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500">
-                    <p> 2026 Pool & Spa Maintenance LLC. All rights reserved.</p>
-                    <div class="flex gap-4">
-                        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-                    </div>
-                </div>
-                <p class="text-xs text-slate-600">Site created by <a href="https://gtwebstudio.site/" target="_blank" rel="noopener noreferrer" class="text-pool-400 hover:text-pool-300 transition-colors font-medium">GT Web Studio</a></p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-8 sm:py-10 border-t border-slate-800"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex flex-col items-center text-center gap-6"><div class="flex items-center gap-2"><i data-lucide="waves" class="w-5 h-5 text-pool-400"></i><span class="text-lg font-bold text-white">Pool&Spa Maintenance LLC</span></div><p class="text-slate-400 text-xs sm:text-sm max-w-md">Professional pool and spa services across New York. Licensed, insured, and dedicated to crystal clear results.</p><a href="tel:+13473930721" class="inline-flex items-center gap-2 text-pool-400 hover:text-pool-300 transition-colors text-sm font-medium"><i data-lucide="phone" class="w-4 h-4"></i> (347) 393-0721</a><div class="flex gap-4 text-xs sm:text-sm"><a href="#home" class="hover:text-white transition-colors">Home</a><a href="#services" class="hover:text-white transition-colors">Services</a><a href="#contact" class="hover:text-white transition-colors">Contact</a></div><div class="flex gap-3 sm:gap-4"><a href="#" class="bg-slate-800 p-2 rounded-lg hover:bg-pool-700 hover:text-white transition-colors"><i data-lucide="facebook" class="w-4 h-4"></i></a><a href="#" class="bg-slate-800 p-2 rounded-lg hover:bg-pool-700 hover:text-white transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a><a href="#" class="bg-slate-800 p-2 rounded-lg hover:bg-pool-700 hover:text-white transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a></div><div class="border-t border-slate-800 pt-5 w-full flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500"><p> 2026 Pool & Spa Maintenance LLC. All rights reserved.</p><div class="flex gap-4"><a href="#" class="hover:text-white transition-colors">Privacy Policy</a><a href="#" class="hover:text-white transition-colors">Terms of Service</a></div></div><p class="text-xs text-slate-600">Site created by <a href="https://gtwebstudio.site/" target="_blank" rel="noopener noreferrer" class="text-pool-400 hover:text-pool-300 transition-colors font-medium">GT Web Studio</a></p></div></div></footer>
 
-    <!-- Scripts -->
     <script>
-        // Initialize Lucide Icons
         lucide.createIcons();
+        AOS.init({ duration: 800, once: true, offset: 100, easing: 'ease-out-cubic' });
         
-        // Initialize AOS Animation Library
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100,
-            easing: 'ease-out-cubic'
-        });
-        
-        // Navbar scroll effect
         const navbar = document.getElementById('navbar');
-        
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('nav-scrolled', 'py-2');
-                navbar.classList.remove('py-4');
-            } else {
-                navbar.classList.remove('nav-scrolled', 'py-2');
-                navbar.classList.add('py-4');
-            }
+            if (window.scrollY > 50) { navbar.classList.add('nav-scrolled', 'py-2'); navbar.classList.remove('py-4'); }
+            else { navbar.classList.remove('nav-scrolled', 'py-2'); navbar.classList.add('py-4'); }
         });
         
-        // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = mobileMenuBtn.querySelector('i');
-        
         mobileMenuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             mobileMenu.classList.toggle('hidden');
-            if (mobileMenu.classList.contains('hidden')) {
-                menuIcon.setAttribute('data-lucide', 'menu');
-            } else {
-                menuIcon.setAttribute('data-lucide', 'x');
-            }
+            menuIcon.setAttribute('data-lucide', mobileMenu.classList.contains('hidden') ? 'menu' : 'x');
             lucide.createIcons();
         });
-        
-        // Close mobile menu when clicking outside
         document.addEventListener('click', (e) => {
-            if (!mobileMenu.classList.contains('hidden') && 
-                !mobileMenu.contains(e.target) && 
-                e.target !== mobileMenuBtn && 
-                !mobileMenuBtn.contains(e.target)) {
-                mobileMenu.classList.add('hidden');
-                menuIcon.setAttribute('data-lucide', 'menu');
-                lucide.createIcons();
+            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(e.target) && e.target !== mobileMenuBtn && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.add('hidden'); menuIcon.setAttribute('data-lucide', 'menu'); lucide.createIcons();
             }
         });
-        
-        // Close mobile menu when clicking a link
         document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuIcon.setAttribute('data-lucide', 'menu');
-                lucide.createIcons();
-            });
+            link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); menuIcon.setAttribute('data-lucide', 'menu'); lucide.createIcons(); });
         });
 
-        // Horizontal scroll with dot indicators
+        const services = [
+            { icon: 'droplets', title: 'Weekly Maintenance', desc: 'Regular cleaning, skimming, vacuuming, and equipment checks to keep your pool in pristine condition at all times.', items: ['Debris removal', 'Wall and floor brushing', 'Equipment inspection'] },
+            { icon: 'flask-conical', title: 'Water Chemistry', desc: 'Precise testing and balancing of pH, chlorine, alkalinity, and other chemical levels to ensure safe, healthy water.', items: ['pH balancing', 'Sanitizer levels', 'Algae prevention'] },
+            { icon: 'filter', title: 'Filtration Systems', desc: 'Expert service for Sand, D.E., and Cartridge filters to optimize water clarity and system efficiency.', items: ['Filter cleaning', 'Backwashing', 'Media replacement'] },
+            { icon: 'wrench', title: 'Equipment Repair', desc: 'Diagnostics and repair for pumps, heaters, automation systems, and all pool mechanical equipment.', items: ['Pump repair', 'Heater service', 'Leak detection'] },
+            { icon: 'sparkles', title: 'Opening & Closing', desc: 'Seasonal pool opening and winterization services to protect your investment during the off-season.', items: ['Cover installation', 'Winterization', 'Spring startup'] },
+            { icon: 'building-2', title: 'Commercial Service', desc: 'Specialized maintenance programs for hotels, gyms, apartment complexes, and public facilities.', items: ['Health code compliance', 'Daily service options', 'Log keeping'] }
+        ];
+        const servicesGrid = document.getElementById('servicesGrid');
+        services.forEach((s, i) => {
+            const card = document.createElement('div');
+            card.className = 'service-card bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300';
+            card.setAttribute('data-aos', 'fade-up'); card.setAttribute('data-aos-delay', (i % 3) * 100);
+            card.innerHTML = `<div class="bg-pool-100 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-4 sm:mb-6"><i data-lucide="${s.icon}" class="w-6 h-6 sm:w-7 sm:h-7 text-pool-600"></i></div><h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">${s.title}</h3><p class="text-sm sm:text-base text-slate-600 leading-relaxed mb-3 sm:mb-4">${s.desc}</p><ul class="space-y-1 sm:space-y-2 text-xs sm:text-sm text-slate-600">${s.items.map(item => `<li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-pool-500"></i> ${item}</li>`).join('')}</ul>`;
+            servicesGrid.appendChild(card);
+        });
+
+        const reviews = [
+            { initials: 'JM', name: 'Jose Murga', info: '10 reviews', text: '"Marlon is quite knowledgeable about hot tubs, he knew exactly how to diagnose my Bullfrog issue..."', time: '8 months ago' },
+            { initials: 'TC', name: 'Tim Carlos', info: 'Local Guide · 11 reviews', text: '"I recently had a great experience with Marlon setting up our new hot tub. He was extremely knowledgeable..."', time: 'a year ago' },
+            { initials: 'JG', name: 'John Gluszak', info: 'Local Guide · 41 reviews', text: '"Marlon is excellent! He went above and beyond installing my new pool liner on a Sunday..."', time: 'a year ago' },
+            { initials: 'LK', name: 'Lina Koffman', info: 'Local Guide · 19 reviews', text: '"Marlon is clearly the best guy you can hire for your pool needs! Highly recommended!"', time: '2 years ago' },
+            { initials: 'LE', name: 'luis espinosa', info: '2 reviews', text: '"Excellent service, very outgoing and responsible, would recommend 100%"', time: '5 years ago', bg: 'bg-slate-200' },
+            { initials: 'WG', name: 'William Guerra', info: '3 reviews', text: 'Positive: Responsiveness, Quality, Professionalism', time: '5 years ago' }
+        ];
+        const reviewsContainer = document.getElementById('reviewsScrollContainer');
+        reviews.forEach(r => {
+            const card = document.createElement('div');
+            card.className = 'review-card bg-white p-5 sm:p-6 rounded-2xl shadow-lg w-[85vw] sm:w-[400px] md:w-[450px] flex-shrink-0 snap-start';
+            card.innerHTML = `<div class="flex items-center gap-3 mb-3"><div class="w-10 h-10 ${r.bg || 'bg-pool-100'} rounded-full flex items-center justify-center shrink-0"><span class="text-pool-700 font-bold text-sm">${r.initials}</span></div><div><div class="font-semibold text-slate-900 text-sm">${r.name}</div><div class="text-xs text-slate-500">${r.info}</div></div></div><div class="flex text-yellow-400 mb-2 text-sm">${'<i data-lucide="star" class="w-4 h-4 fill-current"></i>'.repeat(5)}</div><p class="text-slate-600 text-sm italic leading-relaxed">${r.text}</p><span class="text-xs text-slate-400 mt-3 block">${r.time}</span>`;
+            reviewsContainer.appendChild(card);
+        });
+
+        lucide.createIcons();
+
         const scrollContainer = document.getElementById('reviewsScrollContainer');
         const dots = document.querySelectorAll('.dot-indicator');
-        
         function updateActiveDot() {
             if (!scrollContainer) return;
-            const scrollLeft = scrollContainer.scrollLeft;
             const cardWidth = scrollContainer.querySelector('.review-card').offsetWidth + 16;
-            const activeIndex = Math.round(scrollLeft / cardWidth);
-            
-            dots.forEach((dot, index) => {
-                if (index === activeIndex) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
+            const activeIndex = Math.round(scrollContainer.scrollLeft / cardWidth);
+            dots.forEach((dot, index) => { dot.classList.toggle('active', index === activeIndex); });
         }
-        
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
-                if (!scrollContainer) return;
                 const cardWidth = scrollContainer.querySelector('.review-card').offsetWidth + 16;
-                scrollContainer.scrollTo({
-                    left: index * cardWidth,
-                    behavior: 'smooth'
-                });
+                scrollContainer.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
             });
         });
-        
-        if (scrollContainer) {
-            scrollContainer.addEventListener('scroll', updateActiveDot);
-            updateActiveDot();
-        }
+        if (scrollContainer) { scrollContainer.addEventListener('scroll', updateActiveDot); updateActiveDot(); }
     </script>
 </body>
 </html>
