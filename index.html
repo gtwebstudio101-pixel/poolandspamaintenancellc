@@ -51,8 +51,9 @@
         html { scroll-behavior: smooth; }
         body { overflow-x: hidden; }
         
+        /* Hero background for tablet and desktop (PC) */
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://github.com/gtwebstudio101-pixel/poolandspamaintenancellc/blob/5da7574d555e87b67b12e416cbcc9bfc7c9a5841/img/pool%20hero%20img%20edit%202.png?raw=true');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://github.com/gtwebstudio101-pixel/poolandspamaintenancellc/blob/4ffb505b3aadc2e53fe81f6aa191de8f8fc675d0/img/no%20co%20crop%20main%20hero%20img.png?raw=true');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -61,7 +62,7 @@
         
         @media (max-width: 640px) {
             .hero-bg {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://github.com/gtwebstudio101-pixel/poolandspamaintenancellc/blob/9f19330651df966cfea49df79303256fee5b4545/img/pool%20hero%20img%20for%20mobile%20edit%202.png?raw=true');
+                background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://github.com/gtwebstudio101-pixel/poolandspamaintenancellc/blob/941b8ac623cd155d40398a8936f6de993427ca12/img/no%20co%20crop%20main%20hero%20img%20for%20mobile.png?raw=true');
                 background-attachment: scroll;
                 background-position: center top;
             }
@@ -427,44 +428,20 @@
             link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); menuIcon.setAttribute('data-lucide', 'menu'); lucide.createIcons(); });
         });
 
-        // Contact Form - Mailto Functionality
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             const firstName = document.getElementById('firstName').value.trim();
             const lastName = document.getElementById('lastName').value.trim();
             const email = document.getElementById('email').value.trim();
             const phone = document.getElementById('phone').value.trim();
             const service = document.getElementById('service').value;
             const message = document.getElementById('message').value.trim();
-            
             const fullName = lastName ? `${firstName} ${lastName}` : firstName;
-            
             const subject = `Pool Service Request - ${service} from ${fullName}`;
-            
-            const body = `
-Name: ${fullName}
-Email: ${email}
-Phone: ${phone}
-Service Needed: ${service}
-
-Message:
-${message}
-
----
-Sent from Pool & Spa Maintenance LLC Website
-            `.trim();
-            
-            // Encode for mailto URL
+            const body = `Name: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nService Needed: ${service}\n\nMessage:\n${message}\n\n---\nSent from Pool & Spa Maintenance LLC Website`;
             const mailtoLink = `mailto:poolandspamaintenancellc@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            
-            // Open email client
             window.location.href = mailtoLink;
-            
-            // Optional: Show confirmation after short delay
-            setTimeout(() => {
-                alert('Your email client should open shortly. If not, please email us directly at poolandspamaintenancellc@gmail.com');
-            }, 1000);
+            setTimeout(() => { alert('Your email client should open shortly. If not, please email us directly at poolandspamaintenancellc@gmail.com'); }, 1000);
         });
 
         const services = [
