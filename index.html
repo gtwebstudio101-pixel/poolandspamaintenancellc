@@ -51,6 +51,7 @@
         html { scroll-behavior: smooth; }
         body { overflow-x: hidden; }
         
+        /* Hero background for tablet and desktop (PC) */
         .hero-bg {
             background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('https://github.com/gtwebstudio101-pixel/poolandspamaintenancellc/blob/4ffb505b3aadc2e53fe81f6aa191de8f8fc675d0/img/no%20co%20crop%20main%20hero%20img.png?raw=true');
             background-size: cover;
@@ -61,7 +62,7 @@
         
         @media (max-width: 640px) {
             .hero-bg {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('https://github.com/gtwebstudio101-pixel/poolandspamaintenancellc/blob/941b8ac623cd155d40398a8936f6de993427ca12/img/no%20co%20crop%20main%20hero%20img%20for%20mobile.png?raw=true');
+                background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('https://github.com/gtwebstudio101-pixel/poolandspamaintenancellc/blob/a8dbf70f9b3599058f8daf11de0ba63d97aba43d/img/no%20co%20crop%20main%20hero%20img%20for%20mobile%20test%20.png?raw=true');
                 background-attachment: scroll;
                 background-position: center top;
             }
@@ -407,28 +408,18 @@
         // Contact Form - Opens Gmail in NEW TAB
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             const firstName = document.getElementById('firstName').value.trim();
             const lastName = document.getElementById('lastName').value.trim();
             const email = document.getElementById('email').value.trim();
             const phone = document.getElementById('phone').value.trim();
             const service = document.getElementById('service').value;
             const message = document.getElementById('message').value.trim();
-            
             const fullName = lastName ? `${firstName} ${lastName}` : firstName;
             const subject = `Pool Service Request - ${service} from ${fullName}`;
             const body = `Name: ${fullName}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0AService Needed: ${service}%0D%0A%0D%0AMessage:%0D%0A${encodeURIComponent(message)}%0D%0A%0D%0A---%0D%0ASent from Pool & Spa Maintenance LLC Website`;
-            
-            // Gmail compose URL - opens in new tab
             const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=poolandspamaintenancellc@gmail.com&su=${encodeURIComponent(subject)}&body=${body}`;
-            
-            // Open Gmail in new tab
             window.open(gmailUrl, '_blank');
-            
-            // Show confirmation
-            setTimeout(() => {
-                alert('Gmail should open in a new tab. If blocked by pop-up, please allow pop-ups for this site or email us directly at poolandspamaintenancellc@gmail.com');
-            }, 500);
+            setTimeout(() => { alert('Gmail should open in a new tab. If blocked by pop-up, please allow pop-ups for this site or email us directly at poolandspamaintenancellc@gmail.com'); }, 500);
         });
 
         const services = [
